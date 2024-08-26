@@ -1,4 +1,4 @@
-import { useGetCourseQuery } from "@redux/apis/programs/leadership/course-api";
+import { useGetCourseQuery } from "../../redux apis/course-api";
 import LeaderShipDataGrid from "../leadershipDataGrid";
 import { useEffect, useMemo } from "react";
 import { useNotifications } from "@contexts/notifications-provider";
