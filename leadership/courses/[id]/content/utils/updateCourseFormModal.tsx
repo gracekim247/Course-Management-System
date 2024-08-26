@@ -1,33 +1,48 @@
-import { useMemo, useState, useEffect } from "react";
-import FormField from "@components/pure-form/form-field";
-import {
-  requiredStringSchema,
-  requiredDateSchema,
-  requiredNumberSchema,
-  optionalStringSchema,
-  optionalNumberSchema,
-} from "@constants/pure-schemas";
-import { yupResolver } from "@hookform/resolvers/yup";
-import {
-  Box,
-  Typography,
-  Button,
-  Stack,
-} from "@mui/material";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { useUpdateCourseMutation } from "@redux/apis/programs/leadership/course-api";
-import { useTheme } from "@mui/material/styles";
+import { useMemo, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import FormIndexedSelectField from "@components/pure-form/select/form-indexed-select-field";
-import * as yup from "yup";
-import { useGetAllSchoolOptionsQuery } from "@redux/apis/admin/school-api";
-import { fieldLabelProps } from "@constants/app/admin";
 import { useSelector } from "react-redux";
 import { getUser } from "@redux/selectors";
+import FormField from "../../../../../components pure-form/form-field" 
 import FormDatePicker from "@components/pure-form/time/form-date-picker";
+import FormIndexedSelectField from "../../../../../components pure-form/form-indexed-select-field";
+import { fieldLabelProps } from "@constants/app/admin";
 import { useNotifications } from "@contexts/notifications-provider";
-import { useGetSchoolLiaisonQuery } from "@redux/apis/admin/liaison-api"
+import moment from "moment";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { Box, Typography, Button, Stack, IconButton, TextField } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import CloseIcon from "@mui/icons-material/Close";
+import { useUpdateCourseMutation } from "../../../../../redux apis/course-api"
+import { useGetAllSchoolOptionsQuery } from "@redux/apis/admin/school-api";
+import { useGetSchoolLiaisonQuery } from "../../../../../redux apis/liaison-api"
 
+const optionalStringSchema = yup
+  .mixed()
+  .nullable()
+  .transform((val) => val ?? "")
+  .transform((val) => val.trim());
+
+const requiredStringSchema = optionalStringSchema.test(
+  "mixed-required",
+  "Field is required.",
+  (val) => {
+    return val ? `${val}`.trim().length > 0 : false;
+  }
+);
+
+const requiredNumberSchema = yup.number().required("Field is required.");
+
+const optionalNumberSchema = yup
+  .number()
+  .nullable();
+
+const requiredDateSchema = yup
+  .mixed()
+  .test("required", "A valid date is required.", (value) =>
+    moment(value).isValid()
+  );
 
 const schema = yup
   .object({
