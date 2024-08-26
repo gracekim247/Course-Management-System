@@ -1,6 +1,4 @@
 import { Box, Card, Button } from "@mui/material";
-import FacilitatorAssign from "./component/facilitatorassign";
-import AddSessions from "./component/Managesessions";
 import UpdateCourse from "./component/updateCourse";
 import { useNavigate } from 'react-router-dom';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -56,8 +54,6 @@ export default function Content({ facilitatordata }) {
         Back
       </Button>
       <UpdateCourse courseData={facilitatordata} />
-      {/* <FacilitatorAssign facilitatordata={facilitatordata} />
-      <AddSessions /> */}
     </Box>
   );
 }
