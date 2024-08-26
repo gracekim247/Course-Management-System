@@ -66,21 +66,21 @@ This project was developed during my internship in the summer of 2024. Due to pr
 
 ### Extra functionality of input fields:
 - Start Date and End Date
-   - <img width="740" src="https://github.com/user-attachments/assets/4b9c06e9-5fb3-44bb-935f-305bbcb165dc">
+   - <img width="600" src="https://github.com/user-attachments/assets/4b9c06e9-5fb3-44bb-935f-305bbcb165dc">
 - Associated School Drop-Down Selection
-   - <img width="740" src="https://github.com/user-attachments/assets/1376ed56-f987-4055-9b5f-3a8aaed1a54d">
+   - <img width="600" src="https://github.com/user-attachments/assets/1376ed56-f987-4055-9b5f-3a8aaed1a54d">
 - Liaison Drop-Down Selections with Filtering
-   - <img width="740" src="https://github.com/user-attachments/assets/9675ba28-05bd-4b57-92a4-af2d6f40f332">
+   - <img width="600" src="https://github.com/user-attachments/assets/9675ba28-05bd-4b57-92a4-af2d6f40f332">
 
-   - <img width="740" src="https://github.com/user-attachments/assets/52a35225-7598-4c97-948c-3347146014ef">
+   - <img width="600" src="https://github.com/user-attachments/assets/52a35225-7598-4c97-948c-3347146014ef">
 
-   - <img width="740" src="https://github.com/user-attachments/assets/ab3e0f5b-c35d-4934-b299-a191fcda6abd">
+   - <img width="600" src="https://github.com/user-attachments/assets/ab3e0f5b-c35d-4934-b299-a191fcda6abd">
 
 
 ## Here's a mobile preview of my application:
 ### Create Course Form:
-<img width="450" src="https://github.com/user-attachments/assets/49845602-d7c0-415b-abb0-01512df793b6">
+<img width="350" src="https://github.com/user-attachments/assets/49845602-d7c0-415b-abb0-01512df793b6">
 
 ### Update Course Form:
-<img width="440" src="https://github.com/user-attachments/assets/d3e09e3e-1e29-4d07-8d92-72b10d8574b2">
+<img width="350" src="https://github.com/user-attachments/assets/d3e09e3e-1e29-4d07-8d92-72b10d8574b2">
 
